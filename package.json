@@ -4,14 +4,22 @@
     "description": "A simple extension for C, C++, C#, and Java that ports VS Code's JavaScript block comment completion functionality.",
     "version": "0.0.1",
     "publisher": "kevinkyang",
+    "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/kevinkyang/auto-comment-blocks.git"
     },
-    "license": "",
+    "license": "SEE LICENSE IN LICENSE",
+    "icon": "img/icon.png",
     "engines": {
         "vscode": "^1.12.0"
     },
+    "keywords": [
+        "auto",
+        "comment",
+        "block",
+        "asterisk"
+    ],
     "categories": [
         "Other"
     ],
@@ -28,7 +36,12 @@
             "properties": {
                 "auto-comment-blocks.languages": {
                     "type": "array",
-                    "default": ["c", "cpp", "csharp", "java"],
+                    "default": [
+                        "c", 
+                        "cpp", 
+                        "csharp", 
+                        "java"
+                    ],
                     "description": "Comment completion will be enabled for the languages in this list. Currently supported languages: C (c), C++ (cpp), C# (csharp), and Java (java)."
                 }
             }

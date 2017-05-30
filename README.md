@@ -1,8 +1,9 @@
 # Auto Comment Blocks
 
-A simple extension for C, C++, C#, and Java that ports VS Code's JavaScript block comment completion functionality.
+A simple VS Code extension for C, C++, C#, and Java that ports VS Code's JavaScript block comment completion functionality.
 
 ## Usage
+![Demo](https://raw.githubusercontent.com/kevinkyang/auto-comment-blocks/master/img/demo.gif)
 
 Type `/**` to start a block comment, then hit the Enter key, and the extension will close the block. While inside the comment block, the extension will insert an asterisk at the start of every new line, and align the comment, respecting indentation.
 
