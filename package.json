@@ -12,7 +12,8 @@
     "license": "SEE LICENSE IN LICENSE",
     "icon": "img/icon.png",
     "galleryBanner": {
-        "color": "#171A29"
+        "color": "#171A29",
+        "theme": "light"
     },
     "engines": {
         "vscode": "^1.12.0"
