@@ -17,12 +17,14 @@ There is one setting for this extension:
 
 ## Issues
 
-Currently, VS Code only allows extensions to overwrite, instead of modify, existing language configurations. This means that this extension may clash with another extension that overwrites the same language configurations, causing one or both not to work. In that case, uninstalling this extension is the only option for now.
+* Currently, VS Code only allows extensions to overwrite, instead of modify, existing language configurations. This means that this extension may clash with another extension that overwrites the same language configurations, causing one or both not to work. In that case, uninstalling this extension is the only option for now.
 
 Please create an issue in the Github repository if you find any bugs or have questions/requests.
 
 ## Release Notes
 
 ### 0.0.1
+- Initial Release.
 
-Initial Release.
+### 0.0.4
+- Fixed an issue that caused asterisk insertion and indentation bugs when indenting using an odd number of spaces.
