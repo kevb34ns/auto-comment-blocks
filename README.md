@@ -28,3 +28,6 @@ Please create an issue in the Github repository if you find any bugs or have que
 
 ### 0.0.4
 - Fixed an issue that caused asterisk insertion and indentation bugs when indenting using an odd number of spaces.
+
+### 0.0.5
+- Fix major typo that caused an asterisk to be inserted following any indented line.

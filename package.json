@@ -2,7 +2,7 @@
     "name": "auto-comment-blocks",
     "displayName": "Auto Comment Blocks",
     "description": "A simple extension for C, C++, C#, and Java that ports VS Code's JavaScript block comment completion functionality.",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "kevinkyang",
     "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
     "repository": {

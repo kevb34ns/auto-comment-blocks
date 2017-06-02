@@ -37,7 +37,7 @@ class Configuration {
                 action: { indentAction: IndentAction.None, appendText: ' * ' }
             }, {
                 // e.g.  * ...|
-                beforeText: /^(\t|(\ )|\*)*\ (\ ([^\*]|\*(?!\/))*)?$/,
+                beforeText: /^(\t|(\ ))*\ \*(\ ([^\*]|\*(?!\/))*)?$/,
                 action: { indentAction: IndentAction.None, appendText: '* ' }
             }, {
                 // e.g.  */|
