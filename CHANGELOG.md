@@ -3,6 +3,9 @@ All notable changes to this extension will be documented in this file.
 
 <!--Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.-->
 
+## [0.1.0]
+- Add QDoc (Qt-style) comment block completion for C and C++.
+
 ## [0.0.5]
 - Fix major typo that caused an asterisk to be inserted following any indented line.
 - Changelog now starts with the latest update rather than the oldest.
