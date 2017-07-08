@@ -1,8 +1,8 @@
 {
     "name": "auto-comment-blocks",
     "displayName": "Auto Comment Blocks",
-    "description": "A simple extension for C, C++, C#, and Java that ports VS Code's JavaScript block comment completion functionality.",
-    "version": "0.1.0",
+    "description": "A simple extension for C, C++, C#, CSS/Sass, and Java that ports VS Code's JavaScript block comment completion functionality.",
+    "version": "0.2.0",
     "publisher": "kevinkyang",
     "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
     "repository": {
@@ -31,7 +31,9 @@
         "onLanguage:c",
         "onLanguage:cpp",
         "onLanguage:csharp",
-        "onLanguage:java"
+        "onLanguage:css",
+        "onLanguage:java",
+        "onLanguage:scss"
     ],
     "main": "./out/src/extension",
     "contributes": {
@@ -44,7 +46,9 @@
                         "c",
                         "cpp",
                         "csharp",
-                        "java"
+                        "css",
+                        "java",
+                        "scss"
                     ],
                     "description": "Comment completion will be enabled for the languages in this list. Currently supported languages: C (c), C++ (cpp), C# (csharp), and Java (java)."
                 }
@@ -53,11 +57,19 @@
         "languages": [
             {
                 "id": "c",
-                "configuration": "./languages/c/language-configuration.json"
+                "configuration": "./language-configuration/language-configuration.c.json"
             },
             {
                 "id": "cpp",
-                "configuration": "./languages/cpp/language-configuration.json"
+                "configuration": "./language-configuration/language-configuration.cpp.json"
+            },
+            {
+                "id": "css",
+                "configuration": "./language-configuration/language-configuration.css.json"
+            },
+            {
+                "id": "scss",
+                "configuration": "./language-configuration/language-configuration.scss.json"
             }
         ]
     },

@@ -3,6 +3,9 @@ All notable changes to this extension will be documented in this file.
 
 <!--Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.-->
 
+## [0.2.0]
+- Added block comment completion for CSS/Sass files.
+
 ## [0.1.0]
 - Add QDoc (Qt-style) comment block completion for C and C++.
 
