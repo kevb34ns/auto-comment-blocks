@@ -3,6 +3,10 @@ All notable changes to this extension will be documented in this file.
 
 <!--Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.-->
 
+## [0.2.1]
+- Fixed misspelled filename leading to C functionality breaking.
+- Change extension description to include support for new languages.
+
 ## [0.2.0]
 - Added block comment completion for CSS/Sass files.
 
