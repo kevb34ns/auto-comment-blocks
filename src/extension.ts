@@ -8,6 +8,7 @@ export function activate(context: ExtensionContext) {
         .get<Array<string>>(Configuration.languagesSetting);
 
     langArray.forEach((lang) => {
+        console.log(lang);
         let disposable = languages.setLanguageConfiguration(
             lang, Configuration.languageConfiguration);
         context.subscriptions.push(disposable);
