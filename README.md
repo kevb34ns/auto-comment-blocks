@@ -1,6 +1,6 @@
 # Auto Comment Blocks
 
-A simple VS Code extension for C, C++, C#, CSS/Sass, Java, and Groovy that ports VS Code's JavaScript block comment completion functionality.
+A simple VS Code extension for C, C++, C#, CSS/Sass, PHP, Java, and Groovy that ports VS Code's JavaScript block comment completion functionality.
 
 ## Usage
 ![Demo](https://raw.githubusercontent.com/kevinkyang/auto-comment-blocks/master/img/demo.gif)
@@ -12,7 +12,7 @@ Type `/**` to start a block comment, then hit the Enter key, and the extension w
 Use `/*!` in C/C++ files to start a QDoc comment block.
 
 ## Feature requests
-Currently, this extension supports C, C++, C#, CSS/Sass, Java, and Groovy. If you want to suggest a feature or request support for a specific language, please create an issue in the [repository](https://github.com/kevinkyang/auto-comment-blocks/issues). In the interest of keeping this extension simple and lightweight, some features may not be possible right now.
+Currently, this extension supports C, C++, C#, CSS/Sass, PHP, Java, and Groovy. If you want to suggest a feature or request support for a specific language, please create an issue in the [repository](https://github.com/kevinkyang/auto-comment-blocks/issues). In the interest of keeping this extension simple and lightweight, some features may not be possible right now.
 
 ## Extension Settings
 

@@ -1,7 +1,7 @@
 {
     "name": "auto-comment-blocks",
     "displayName": "Auto Comment Blocks",
-    "description": "A simple extension for C, C++, C#, CSS/Sass, and Java that ports VS Code's JavaScript block comment completion functionality.",
+    "description": "A simple extension for C, C++, C#, CSS/Sass, PHP, Java, and Groovy that ports VS Code's JavaScript block comment completion functionality.",
     "version": "0.2.2",
     "publisher": "kevinkyang",
     "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
@@ -34,7 +34,8 @@
         "onLanguage:css",
         "onLanguage:java",
         "onLanguage:scss",
-        "onLanguage:groovy"
+        "onLanguage:groovy",
+        "onLanguage:php"
     ],
     "main": "./out/src/extension",
     "contributes": {
@@ -50,7 +51,8 @@
                         "css",
                         "java",
                         "scss",
-                        "groovy"
+                        "groovy",
+                        "php"
                     ],
                     "description": "Comment completion will be enabled for the lanuages in this list. Currently supported languages: C (c), C++ (cpp), C# (csharp), CSS (css), Sass (scss), Java (java), and Groovy (groovy)."
                 }
@@ -76,6 +78,10 @@
             {
                 "id": "groovy",
                 "configuration": "./language-configuration/language-configuration.groovy.json"
+            },
+            {
+                "id": "php",
+                "configuration": "./language-configuration/language-configuration.php.json"
             }
         ]
     },
