@@ -55,6 +55,11 @@
                         "php"
                     ],
                     "description": "Comment completion will be enabled for the lanuages in this list. Currently supported languages: C (c), C++ (cpp), C# (csharp), CSS (css), Sass (scss), Java (java), and Groovy (groovy)."
+                },
+                "auto-comment-blocks.single-line-blocks": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "For C/C++, this enables muti-line comment blocks starting with `//` or `///`. Press Shift+Enter to break the comment block."
                 }
             }
         },
@@ -82,6 +87,13 @@
             {
                 "id": "php",
                 "configuration": "./language-configuration/language-configuration.php.json"
+            }
+        ],
+        "keybindings":[
+            {
+                "command": "auto-comment-blocks.break-single-line-block",
+                "key": "shift+enter",
+                "when": "editorTextFocus"
             }
         ]
     },

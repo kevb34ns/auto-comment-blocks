@@ -1,6 +1,6 @@
 'use strict';
 
-import { languages, workspace, ExtensionContext, IndentAction, LanguageConfiguration } from 'vscode';
+import { languages, commands, workspace, ExtensionContext, IndentAction, LanguageConfiguration } from 'vscode';
 
 export function activate(context: ExtensionContext) {
     
@@ -13,6 +13,18 @@ export function activate(context: ExtensionContext) {
             lang, Configuration.languageConfiguration);
         context.subscriptions.push(disposable);
     });
+
+    commands.registerTextEditorCommand("auto-comment-blocks.break-single-line-block", (textEditor, edit, args) => {
+        //TODO check if line is // or ///, and replace the line with an empty line; handle multi cursor(?) 
+        //TODO need to add onCommand activation event to prevent annoying command not found warnings
+        if (textEditor.document.languageId === 'c' || 
+                textEditor.document.languageId === 'cpp') {
+            
+            if (textEditor.selection.isEmpty) {
+                edit.insert(textEditor.selection.active, "\n");
+            }
+        }
+    })   
 }
 
 export function deactivate() {
@@ -23,6 +35,8 @@ class Configuration {
     static extensionName: string = "auto-comment-blocks";
 
     static languagesSetting: string = "languages";
+
+    static singleLineBlocksSetting: string = "single-line-blocks";
     
     static languageConfiguration: LanguageConfiguration = {
 
