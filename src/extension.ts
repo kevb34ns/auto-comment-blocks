@@ -1,7 +1,7 @@
 'use strict';
 
 import { languages, commands, workspace, ExtensionContext, IndentAction, LanguageConfiguration, OnEnterRule } from 'vscode';
-
+//TODO refactor code, rename command and setting to more accurate name, change setting descriptions to indicate that reloads are needed (or handle onDidChangeConfiguration events yourself)
 export function activate(context: ExtensionContext) {
     
     let langArray = Configuration.getConfiguration()
@@ -32,8 +32,8 @@ export function activate(context: ExtensionContext) {
             if (line.text.search(/^\s*\/\/\/\s*/) !== -1 ||
                 line.text.search(/^\s*\/\/\s*/) !== -1) {
                 
-        //      TODO handle indentation on newline
-                edit.insert(textEditor.selection.active, "\n");
+                let indentedNewline = '\n' + line.text.substring(0, line.text.search(/\//));
+                edit.insert(textEditor.selection.active, indentedNewline);
             }
         }
     })   
@@ -88,11 +88,9 @@ class Configuration {
         ]
     }
     
-
-    //TODO '//' regex has to check that there are no more '/'s following it
     static singleLineBlockEnterRules: Array<OnEnterRule> = [
         {
-            beforeText: /^\s*\/\//,
+            beforeText: /^\s*\/\/(?!\/)/,
             action: { indentAction: IndentAction.None, appendText: '// '}
         },
         {
