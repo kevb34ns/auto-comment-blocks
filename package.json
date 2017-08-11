@@ -35,7 +35,8 @@
         "onLanguage:java",
         "onLanguage:scss",
         "onLanguage:groovy",
-        "onLanguage:php"
+        "onLanguage:php",
+        "onCommand:auto-comment-blocks.break-single-line-block"
     ],
     "main": "./out/src/extension",
     "contributes": {
