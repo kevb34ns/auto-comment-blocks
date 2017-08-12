@@ -25,13 +25,13 @@ function getLanguageIds(): Array<string> {
 }
 
 function setLanguageConfiguration(languageId: string): Disposable {
-  let config = Configuration.languageConfiguration;
+	let config: LanguageConfiguration = { };
   if ((languageId === 'c' || languageId === 'cpp') &&
       Configuration.getConfiguration()
           .get<Boolean>(Configuration.singleLineBlocksSetting)) {
 
-    config.onEnterRules = config.onEnterRules
-        .concat(Configuration.singleLineBlockEnterRules);
+		config.onEnterRules = Configuration.languageConfiguration.onEnterRules
+						.concat(Configuration.singleLineBlockEnterRules);
   }
 
   return languages.setLanguageConfiguration(languageId, config);

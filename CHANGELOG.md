@@ -3,6 +3,9 @@ All notable changes to this extension will be documented in this file.
 
 <!--Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.-->
 
+## [0.3.1]
+- Fix bug that that caused every language to have single-line block comments.
+
 ## [0.3.0]
 - Add single-line blocks for C/C++ (disabled by default).
 - Add comment completion for PHP files.
