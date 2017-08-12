@@ -36,7 +36,7 @@
         "onLanguage:scss",
         "onLanguage:groovy",
         "onLanguage:php",
-        "onCommand:auto-comment-blocks.break-single-line-block"
+        "onCommand:auto-comment-blocks.breakSingleLineBlock"
     ],
     "main": "./out/src/extension",
     "contributes": {
@@ -57,10 +57,10 @@
                     ],
                     "description": "Comment completion will be enabled for the lanuages in this list. Currently supported languages: C (c), C++ (cpp), C# (csharp), CSS (css), Sass (scss), Java (java), and Groovy (groovy)."
                 },
-                "auto-comment-blocks.single-line-blocks": {
+                "auto-comment-blocks.singleLineBlocksEnabled": {
                     "type": "boolean",
                     "default": false,
-                    "description": "For C/C++, this enables muti-line comment blocks starting with `//` or `///`. Press Shift+Enter to break the comment block."
+                    "description": "For C/C++, this enables auto comment blocks for comments beginning with `//` or `///`. Press Shift+Enter to break the comment block."
                 }
             }
         },
@@ -92,7 +92,7 @@
         ],
         "keybindings":[
             {
-                "command": "auto-comment-blocks.break-single-line-block",
+                "command": "auto-comment-blocks.breakSingleLineBlock",
                 "key": "shift+enter",
                 "when": "editorTextFocus"
             }
