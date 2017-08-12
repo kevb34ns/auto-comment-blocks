@@ -11,14 +11,16 @@ Type `/**` to start a block comment, then hit the Enter key, and the extension w
 ### QDoc-style (Qt) comment blocks
 Use `/*!` in C/C++ files to start a QDoc comment block.
 
+### New: "single-line" block comments for C/C++
+You must enable this feature explicitly (see 'Extension Settings'). Hit Enter on a line that begins with `//` or `///` to create a comment block where each line is a single-line comment. To break out of the comment block, press Shift+Enter (you can rebind this in the keyboard shortcut preferences).
+
 ## Feature requests
 Currently, this extension supports C, C++, C#, CSS/Sass, PHP, Java, and Groovy. If you want to suggest a feature or request support for a specific language, please create an issue in the [repository](https://github.com/kevinkyang/auto-comment-blocks/issues). In the interest of keeping this extension simple and lightweight, some features may not be possible right now.
 
 ## Extension Settings
 
-There is one setting for this extension:
-
-* `auto-comment-blocks.languages`: Comment completion will be enabled for the languages in this list. 
+* `auto-comment-blocks.languages`: Comment completion will be enabled for the languages in this list.
+* `auto-comment-blocks.singleLineBlocksEnabled`: For C/C++, this enables auto comment blocks for comments beginning with `//` or `///`. Press Shift+Enter to break the comment block. Disabled by default.
 
 ## Issues
 
@@ -29,11 +31,6 @@ Please create an issue in the Github repository if you find any bugs or have que
 
 ## Release Notes
 
-### 0.0.1
-- Initial Release.
-
-### 0.1.0
-- Add QDoc (Qt-style) comment block completion for C and C++.
-
-### 0.2.0
-- Added block comment completion for CSS/Sass files.
+### 0.3.0
+- Add single-line blocks for C/C++ (disabled by default).
+- Add comment completion for PHP files.

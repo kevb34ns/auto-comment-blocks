@@ -2,7 +2,7 @@
     "name": "auto-comment-blocks",
     "displayName": "Auto Comment Blocks",
     "description": "A simple extension for C, C++, C#, CSS/Sass, PHP, Java, and Groovy that ports VS Code's JavaScript block comment completion functionality.",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "publisher": "kevinkyang",
     "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
     "repository": {
@@ -90,7 +90,7 @@
                 "configuration": "./language-configuration/language-configuration.php.json"
             }
         ],
-        "keybindings":[
+        "keybindings": [
             {
                 "command": "auto-comment-blocks.breakSingleLineBlock",
                 "key": "shift+enter",
