@@ -32,7 +32,10 @@ function setLanguageConfiguration(languageId: string): Disposable {
 
 		config.onEnterRules = Configuration.languageConfiguration.onEnterRules
 						.concat(Configuration.singleLineBlockEnterRules);
-  }
+	} else {
+		
+		config.onEnterRules = Configuration.languageConfiguration.onEnterRules;
+	}
 
   return languages.setLanguageConfiguration(languageId, config);
 }
