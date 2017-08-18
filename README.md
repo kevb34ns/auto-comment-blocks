@@ -12,7 +12,20 @@ Type `/**` to start a block comment, then hit the Enter key, and the extension w
 Use `/*!` in C/C++ files to start a QDoc comment block.
 
 ### New: "single-line" block comments for C/C++
-You must enable this feature explicitly (see 'Extension Settings'). Hit Enter on a line that begins with `//` or `///` to create a comment block where each line is a single-line comment. To break out of the comment block, press Shift+Enter (you can rebind this in the keyboard shortcut preferences).
+You must enable this feature explicitly (see 'Extension Settings'). Hit Enter on a line that begins with `//` or `///` to create a comment block where each line is a single-line comment. To break out of the comment block, press Shift+Enter (this shortcut can be changed).
+
+### Language Support
+| Language | ID       | Single-line | Multi-line         |
+| -------- | -------- | ----------- | ------------------ |
+| C   | `c` | `//`, &nbsp;`///` | `/** */`, &nbsp;`/*! */` |
+| C++   | `cpp` | `//`, &nbsp;`///` | `/** */`, &nbsp;`/*! */` |
+| C# | `csharp` | `//`, &nbsp;`///` | `/** */` |
+| CSS | `css` | | `/** */` |
+| Groovy | `groovy` | `//` | `/** */` |
+| Java | `java` | `//` | `/** */` |
+| PHP | `php` | `//`, &nbsp;`#` | `/** */` |
+| Sass | `scss` | | `/** */` |
+
 
 ## Feature requests
 Currently, this extension supports C, C++, C#, CSS/Sass, PHP, Java, and Groovy. If you want to suggest a feature or request support for a specific language, please create an issue in the [repository](https://github.com/kevinkyang/auto-comment-blocks/issues). In the interest of keeping this extension simple and lightweight, some features may not be possible right now.
