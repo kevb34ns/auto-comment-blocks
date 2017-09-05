@@ -1,0 +1,32 @@
+{
+  "//": [
+    "c",
+    "cpp",
+    "csharp",
+    "fsharp",
+    "go",
+    "groovy",
+    "java",
+    "javascript",
+    "less",
+    "objective-c",
+    "php",
+    "rust",
+    "scss",
+    "swift"
+  ],
+  "#": [
+    "coffeescript",
+    "dockerfile",
+    "makefile",
+    "perl",
+    "php",
+    "powershell",
+    "python",
+    "r",
+    "ruby"
+  ],
+  ";": [
+    "clojure"
+  ]
+}
