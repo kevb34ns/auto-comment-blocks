@@ -55,7 +55,7 @@ export class Rules {
   static readonly hashEnterRules: OnEnterRule[] = [
     {
       // e.g. # ...|
-      beforeText: /^\s*#(?!\/)/,
+      beforeText: /^\s*#/,
       action: { indentAction: IndentAction.None, appendText: '# '}
     }
   ]
@@ -63,7 +63,7 @@ export class Rules {
   static readonly semicolonEnterRules: OnEnterRule[] = [
     {
       // e.g. ; ...|
-      beforeText: /^\s*;(?!\/)/,
+      beforeText: /^\s*;/,
       action: { indentAction: IndentAction.None, appendText: '; '}
     }
   ]
