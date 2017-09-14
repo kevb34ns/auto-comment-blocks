@@ -28,6 +28,7 @@
         "Other"
     ],
     "activationEvents": [
+        "*",
         "onLanguage:c",
         "onLanguage:cpp",
         "onLanguage:csharp",
@@ -36,31 +37,37 @@
         "onLanguage:scss",
         "onLanguage:groovy",
         "onLanguage:php",
-        "onCommand:auto-comment-blocks.breakSingleLineBlock"
+        "onCommand:auto-comment-blocks.singleLineBlock"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "configuration": {
             "title": "Auto Comment Blocks",
             "properties": {
-                "auto-comment-blocks.languages": {
-                    "type": "array",
-                    "default": [
-                        "c",
-                        "cpp",
-                        "csharp",
-                        "css",
-                        "java",
-                        "scss",
-                        "groovy",
-                        "php"
-                    ],
-                    "description": "Comment completion will be enabled for the lanuages in this list. Currently supported languages: C (c), C++ (cpp), C# (csharp), CSS (css), Sass (scss), Java (java), and Groovy (groovy)."
-                },
-                "auto-comment-blocks.singleLineBlocksEnabled": {
+                "auto-comment-blocks.singleLineBlockOnEnter": {
                     "type": "boolean",
                     "default": false,
-                    "description": "For C/C++, this enables auto comment blocks for comments beginning with `//` or `///`. Press Shift+Enter to break the comment block."
+                    "description": "If enabled, a new commented line is inserted when Enter is pressed, and comment blocks are broken by pressing Shift+Enter. If disabled (the default), a commented line is inserted when Shift+Enter is pressed, and comment blocks are broken by pressing Enter."
+                },
+                "auto-comment-blocks.disabledLanguages": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Add languageIds here to disable any comment completion for that language. See README for the list of supported languageIds."
+                },
+                "auto-comment-blocks.slashStyleBlocks": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Add languageIds here to enable '//' and '///'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
+                },
+                "auto-comment-blocks.hashStyleBlocks": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Add languageIds here to enable '#'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
+                },
+                "auto-comment-blocks.semicolonStyleBlocks": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Add languageIds here to enable ';'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
                 }
             }
         },
@@ -92,7 +99,7 @@
         ],
         "keybindings": [
             {
-                "command": "auto-comment-blocks.breakSingleLineBlock",
+                "command": "auto-comment-blocks.singleLineBlock",
                 "key": "shift+enter",
                 "when": "editorTextFocus"
             }

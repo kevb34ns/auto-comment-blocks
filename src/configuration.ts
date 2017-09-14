@@ -16,7 +16,6 @@ export class Configuration {
   private readonly multiLineConfigFile: string = __dirname +
       "/../../language-configuration/multi-line-configuration.json";
 
-  // new settings TODO need to add these to package.json
   private readonly singleLineBlockOnEnter: string = "singleLineBlockOnEnter";
   private readonly slashStyleBlocks: string = "slashStyleBlocks";
   private readonly hashStyleBlocks: string = "hashStyleBlocks";
@@ -53,21 +52,25 @@ export class Configuration {
     };
 
     if (multiLine) {
-      langConfig.onEnterRules.concat(Rules.multilineEnterRules);
+      langConfig.onEnterRules =
+          langConfig.onEnterRules.concat(Rules.multilineEnterRules);
     }
 
-    let isOnEnter = this.getConfiguration()
-        .get<boolean>(this.singleLineBlockOnEnter);
+    let isOnEnter = this.getConfiguration().get<boolean>(
+        this.singleLineBlockOnEnter);
     if (isOnEnter && singleLineStyle) {
       if (singleLineStyle === '//') {
-        langConfig.onEnterRules.concat(Rules.slashEnterRules);
+        langConfig.onEnterRules =
+            langConfig.onEnterRules.concat(Rules.slashEnterRules);
       } else if (singleLineStyle === '#') {
-        langConfig.onEnterRules.concat(Rules.hashEnterRules);
+        langConfig.onEnterRules = 
+            langConfig.onEnterRules.concat(Rules.hashEnterRules);
       } else if (singleLineStyle === ';') {
-        langConfig.onEnterRules.concat(Rules.semicolonEnterRules);
+        langConfig.onEnterRules =
+            langConfig.onEnterRules.concat(Rules.semicolonEnterRules);
       }
     }
-
+    
     return languages.setLanguageConfiguration(langId, langConfig);
   }
 
@@ -76,8 +79,8 @@ export class Configuration {
     let singleLineConfig: Object = JSON.parse(fs.readFileSync(
       this.singleLineConfigFile, 'utf-8'));
     let commentStyles = Object.keys(singleLineConfig);
-    for (let key in commentStyles) {
-      for (let langId in singleLineConfig[key]) {
+    for (let key of commentStyles) {
+      for (let langId of singleLineConfig[key]) {
         if (!this.isLangIdDisabled(langId)) {
           this.singleLineBlocksMap.set(langId, key);
         }
@@ -87,7 +90,7 @@ export class Configuration {
     // get user-customized langIds for this key and add to the map
     let customSlashLangs = 
         this.getConfiguration().get<string[]>(this.slashStyleBlocks);
-    for (let langId in customSlashLangs) {
+    for (let langId of customSlashLangs) {
       if (langId && langId.length > 0) {
         this.singleLineBlocksMap.set(langId, '//');
       }
@@ -95,15 +98,15 @@ export class Configuration {
 
     let customHashLangs = 
         this.getConfiguration().get<string[]>(this.hashStyleBlocks);
-    for (let langId in customHashLangs) {
+    for (let langId of customHashLangs) {
       if (langId && langId.length > 0) {
         this.singleLineBlocksMap.set(langId, '#');
       }
     }
 
-    let customSemicolonLangs
+    let customSemicolonLangs =
         this.getConfiguration().get<string[]>(this.semicolonStyleBlocks);
-    for (let langId in customSemicolonLangs) {
+    for (let langId of customSemicolonLangs) {
       if (langId && langId.length > 0) {
         this.singleLineBlocksMap.set(langId, ';');
       }
@@ -160,9 +163,10 @@ export class Configuration {
         return;
       }
 
-      var indentedNewLine = '\n' + line.text.substring(0, line.text.search(indentRegex));
-      let isOnEnter = this.getConfiguration()
-          .get<boolean>(this.singleLineBlockOnEnter);
+      var indentedNewLine = '\n' + 
+          line.text.substring(0, line.text.search(indentRegex));
+      let isOnEnter = this.getConfiguration().get<boolean>(
+          this.singleLineBlockOnEnter);
       if (!isOnEnter) {
         indentedNewLine += style + ' ';
       }
