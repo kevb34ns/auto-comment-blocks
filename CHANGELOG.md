@@ -3,6 +3,10 @@ All notable changes to this extension will be documented in this file.
 
 <!--Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.-->
 
+## [1.0.0]
+- Add multi-line comment support for Less, Objective-C/C++, and Swift.
+- Add single-line comment blocks for most officially supported languages. See README for more information.
+
 ## [0.3.2]
 - Fix a bug that broke the extension, caused by the previous bugfix.
 

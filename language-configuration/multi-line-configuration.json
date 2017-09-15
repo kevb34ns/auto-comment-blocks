@@ -4,11 +4,13 @@
     "cpp",
     "csharp",
     "css",
-    "java",
-    "scss",
     "groovy",
-    "php",
+    "java",
+    "less",
     "objective-c",
-    "objective-cpp"
+    "objective-cpp",
+    "php",
+    "scss",
+    "swift"
   ]
 }

@@ -1,8 +1,8 @@
 {
     "name": "auto-comment-blocks",
     "displayName": "Auto Comment Blocks",
-    "description": "A simple extension for C, C++, C#, CSS/Sass, PHP, Java, and Groovy that ports VS Code's JavaScript block comment completion functionality.",
-    "version": "0.3.2",
+    "description": "Provides block comment completion for Javadoc-style multi-line comments and single-line comment blocks for most officially supported languages.",
+    "version": "1.0.0",
     "publisher": "kevinkyang",
     "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
     "repository": {
@@ -29,14 +29,6 @@
     ],
     "activationEvents": [
         "*",
-        "onLanguage:c",
-        "onLanguage:cpp",
-        "onLanguage:csharp",
-        "onLanguage:css",
-        "onLanguage:java",
-        "onLanguage:scss",
-        "onLanguage:groovy",
-        "onLanguage:php",
         "onCommand:auto-comment-blocks.singleLineBlock"
     ],
     "main": "./out/src/extension",
@@ -52,7 +44,7 @@
                 "auto-comment-blocks.disabledLanguages": {
                     "type": "array",
                     "default": [],
-                    "description": "Add languageIds here to disable any comment completion for that language. See README for the list of supported languageIds."
+                    "description": "Add languageIds here to disable any comment completion for that language."
                 },
                 "auto-comment-blocks.slashStyleBlocks": {
                     "type": "array",
