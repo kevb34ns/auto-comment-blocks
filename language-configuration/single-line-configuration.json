@@ -14,7 +14,8 @@
     "php",
     "rust",
     "scss",
-    "swift"
+    "swift",
+    "typescript"
   ],
   "#": [
     "coffeescript",

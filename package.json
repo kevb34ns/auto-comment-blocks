@@ -95,6 +95,14 @@
             {
                 "id": "php",
                 "configuration": "./language-configuration/language-configuration.php.json"
+            },
+            {
+                "id": "objective-c",
+                "configuration": "./language-configuration/language-configuration.objective-c.json"
+            },
+            {
+                "id": "objective-cpp",
+                "configuration": "./language-configuration/language-configuration.objective-c.json"
             }
         ],
         "keybindings": [
