@@ -103,6 +103,14 @@
             {
                 "id": "objective-cpp",
                 "configuration": "./language-configuration/language-configuration.objective-c.json"
+            },
+            {
+                "id": "less",
+                "configuration": "./language-configuration/language-configuration.less.json"
+            },
+            {
+                "id": "swift",
+                "configuration": "./language-configuration/language-configuration.swift.json"
             }
         ],
         "keybindings": [
