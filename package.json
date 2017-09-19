@@ -107,6 +107,10 @@
             {
                 "id": "rust",
                 "configuration": "./language-configuration/language-configuration.rust.json"
+            },
+            {
+                "id": "go",
+                "configuration": "./language-configuration/language-configuration.go.json"
             }
         ],
         "keybindings": [

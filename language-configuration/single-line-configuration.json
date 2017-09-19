@@ -25,7 +25,8 @@
     "powershell",
     "python",
     "r",
-    "ruby"
+    "ruby",
+    "yaml"
   ],
   ";": [
     "clojure"
