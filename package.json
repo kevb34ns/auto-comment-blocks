@@ -103,6 +103,10 @@
             {
                 "id": "swift",
                 "configuration": "./language-configuration/language-configuration.swift.json"
+            },
+            {
+                "id": "rust",
+                "configuration": "./language-configuration/language-configuration.rust.json"
             }
         ],
         "keybindings": [

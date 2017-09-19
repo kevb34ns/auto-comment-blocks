@@ -10,6 +10,7 @@
     "objective-c",
     "objective-cpp",
     "php",
+    "rust",
     "scss",
     "swift"
   ]
