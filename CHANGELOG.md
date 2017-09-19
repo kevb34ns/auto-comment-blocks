@@ -3,6 +3,10 @@ All notable changes to this extension will be documented in this file.
 
 <!--Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.-->
 
+## [1.0.1]
+- Add multi-line support for Rust, Go
+- Add single-line support for YAML
+
 ## [1.0.0]
 - Add multi-line comment support for Less, Objective-C/C++, and Swift.
 - Add single-line comment blocks for most officially supported languages. See README for more information.

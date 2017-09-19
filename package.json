@@ -2,7 +2,7 @@
     "name": "auto-comment-blocks",
     "displayName": "Auto Comment Blocks",
     "description": "Provides block comment completion for Javadoc-style multi-line comments and single-line comment blocks for most officially supported languages.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "kevinkyang",
     "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
     "repository": {
