@@ -12,7 +12,7 @@ You can now use single line comment blocks for languages with `//`, `#`, or `;` 
 The Language Support section shows which languages are supported. See the Settings section for how to add single line comment support to languages that are not officially supported.
 
 ### Multi-line Comment Blocks
-This feature has not changed, but support has now been added for Less, Objective-C/C++, and Swift.
+This feature has not changed, but support has now been added for Less, Objective-C/C++, Swift and D.
 
 ## Usage
 ![Demo](https://raw.githubusercontent.com/kevinkyang/auto-comment-blocks/master/img/demo.gif)
@@ -21,7 +21,7 @@ This feature has not changed, but support has now been added for Less, Objective
 Type `/**` to start a block comment, then hit the Enter key, and the extension will close the block. While inside the comment block, the extension will insert an asterisk at the start of every new line, and align the comment, respecting indentation.
 
 ### QDoc-style (Qt) comment blocks
-Use `/*!` in C/C++ files to start a QDoc comment block.
+Use `/*!` in C/C++ and D files to start a QDoc comment block.
 
 ### New: "single-line" block comments
 You can insert single line comment blocks for languages with `//`, `#`, or `;` style single line comments. Press `Shift+Enter` while on a commented line to insert a new commented line with the same level of indentation. See the Settings section for issues and more options.
@@ -30,9 +30,9 @@ You can insert single line comment blocks for languages with `//`, `#`, or `;` s
 
 | Comment Style | Language Support |
 | ------- | ------- |
-| `/** */` | C, C++, C#, CSS, Go, Groovy, Java, Less, Objective C/C++, PHP, Sass, Rust, Swift |
-| `/*! */` | C, C++ |
-| `//`, `///` | C, C++, C#, F#, Go, Groovy, Java, JavaScript, Less, Objective C/C++, PHP, Rust, Sass, Swift, TypeScript |
+| `/** */` | C, C++, C#, CSS, D, Go, Groovy, Java, Less, Objective C/C++, PHP, Sass, Rust, Swift |
+| `/*! */` | C, C++, D |
+| `//`, `///` | C, C++, C#, D, F#, Go, Groovy, Java, JavaScript, Less, Objective C/C++, PHP, Rust, Sass, Swift, TypeScript |
 | `#` | CoffeeScript, Dockerfile, Makefile, Perl, PowerShell, Python, R, Ruby, YAML |
 | `;` | Clojure |
 
