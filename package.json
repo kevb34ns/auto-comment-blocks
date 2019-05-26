@@ -1,137 +1,142 @@
 {
-    "name": "auto-comment-blocks",
-    "displayName": "Auto Comment Blocks",
-    "description": "Provides block comment completion for Javadoc-style multi-line comments and single-line comment blocks for most officially supported languages.",
-    "version": "1.0.1",
-    "publisher": "kevinkyang",
-    "homepage": "https://github.com/kevinkyang/auto-comment-blocks",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kevinkyang/auto-comment-blocks.git"
-    },
-    "license": "SEE LICENSE IN LICENSE",
-    "icon": "img/icon.png",
-    "galleryBanner": {
-        "color": "#171A29",
-        "theme": "dark"
-    },
-    "engines": {
-        "vscode": "^1.12.0"
-    },
-    "keywords": [
-        "auto",
-        "comment",
-        "block",
-        "asterisk"
-    ],
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "*",
-        "onCommand:auto-comment-blocks.singleLineBlock"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "configuration": {
-            "title": "Auto Comment Blocks",
-            "properties": {
-                "auto-comment-blocks.singleLineBlockOnEnter": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "If enabled, a new commented line is inserted when Enter is pressed, and comment blocks are broken by pressing Shift+Enter. If disabled (the default), a commented line is inserted when Shift+Enter is pressed, and comment blocks are broken by pressing Enter."
-                },
-                "auto-comment-blocks.disabledLanguages": {
-                    "type": "array",
-                    "default": [],
-                    "description": "Add languageIds here to disable any comment completion for that language."
-                },
-                "auto-comment-blocks.slashStyleBlocks": {
-                    "type": "array",
-                    "default": [],
-                    "description": "Add languageIds here to enable '//' and '///'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
-                },
-                "auto-comment-blocks.hashStyleBlocks": {
-                    "type": "array",
-                    "default": [],
-                    "description": "Add languageIds here to enable '#'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
-                },
-                "auto-comment-blocks.semicolonStyleBlocks": {
-                    "type": "array",
-                    "default": [],
-                    "description": "Add languageIds here to enable ';'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
-                }
-            }
-        },
-        "languages": [
-            {
-                "id": "c",
-                "configuration": "./language-configuration/language-configuration.c.json"
-            },
-            {
-                "id": "cpp",
-                "configuration": "./language-configuration/language-configuration.cpp.json"
-            },
-            {
-                "id": "css",
-                "configuration": "./language-configuration/language-configuration.css.json"
-            },
-            {
-                "id": "scss",
-                "configuration": "./language-configuration/language-configuration.scss.json"
-            },
-            {
-                "id": "groovy",
-                "configuration": "./language-configuration/language-configuration.groovy.json"
-            },
-            {
-                "id": "php",
-                "configuration": "./language-configuration/language-configuration.php.json"
-            },
-            {
-                "id": "objective-c",
-                "configuration": "./language-configuration/language-configuration.objective-c.json"
-            },
-            {
-                "id": "objective-cpp",
-                "configuration": "./language-configuration/language-configuration.objective-c.json"
-            },
-            {
-                "id": "less",
-                "configuration": "./language-configuration/language-configuration.less.json"
-            },
-            {
-                "id": "swift",
-                "configuration": "./language-configuration/language-configuration.swift.json"
-            },
-            {
-                "id": "rust",
-                "configuration": "./language-configuration/language-configuration.rust.json"
-            },
-            {
-                "id": "go",
-                "configuration": "./language-configuration/language-configuration.go.json"
-            }
-        ],
-        "keybindings": [
-            {
-                "command": "auto-comment-blocks.singleLineBlock",
-                "key": "shift+enter",
-                "when": "editorTextFocus"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
-    }
+	"name": "auto-comment-blocks",
+	"displayName": "Auto Comment Blocks",
+	"description": "Provides block comment completion for Javadoc-style multi-line comments and single-line comment blocks for most officially supported languages.",
+	"version": "1.0.1",
+	"publisher": "kevinkyang",
+	"homepage": "https://github.com/kevinkyang/auto-comment-blocks",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kevinkyang/auto-comment-blocks.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"icon": "img/icon.png",
+	"galleryBanner": {
+		"color": "#171A29",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"keywords": [
+		"auto",
+		"comment",
+		"block",
+		"asterisk"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*",
+		"onCommand:auto-comment-blocks.singleLineBlock"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"title": "Auto Comment Blocks",
+			"properties": {
+				"auto-comment-blocks.singleLineBlockOnEnter": {
+					"type": "boolean",
+					"default": false,
+					"description": "If enabled, a new commented line is inserted when Enter is pressed, and comment blocks are broken by pressing Shift+Enter. If disabled (the default), a commented line is inserted when Shift+Enter is pressed, and comment blocks are broken by pressing Enter."
+				},
+				"auto-comment-blocks.disabledLanguages": {
+					"type": "array",
+					"default": [],
+					"description": "Add languageIds here to disable any comment completion for that language."
+				},
+				"auto-comment-blocks.slashStyleBlocks": {
+					"type": "array",
+					"default": [],
+					"description": "Add languageIds here to enable '//' and '///'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
+				},
+				"auto-comment-blocks.hashStyleBlocks": {
+					"type": "array",
+					"default": [],
+					"description": "Add languageIds here to enable '#'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
+				},
+				"auto-comment-blocks.semicolonStyleBlocks": {
+					"type": "array",
+					"default": [],
+					"description": "Add languageIds here to enable ';'-style single line comment blocks for that language. This allows unsupported languages to have comment completion."
+				}
+			}
+		},
+		"languages": [
+			{
+				"id": "c",
+				"configuration": "./language-configuration/language-configuration.c.json"
+			},
+			{
+				"id": "cpp",
+				"configuration": "./language-configuration/language-configuration.cpp.json"
+			},
+			{
+				"id": "css",
+				"configuration": "./language-configuration/language-configuration.css.json"
+			},
+			{
+				"id": "scss",
+				"configuration": "./language-configuration/language-configuration.scss.json"
+			},
+			{
+				"id": "groovy",
+				"configuration": "./language-configuration/language-configuration.groovy.json"
+			},
+			{
+				"id": "php",
+				"configuration": "./language-configuration/language-configuration.php.json"
+			},
+			{
+				"id": "objective-c",
+				"configuration": "./language-configuration/language-configuration.objective-c.json"
+			},
+			{
+				"id": "objective-cpp",
+				"configuration": "./language-configuration/language-configuration.objective-c.json"
+			},
+			{
+				"id": "less",
+				"configuration": "./language-configuration/language-configuration.less.json"
+			},
+			{
+				"id": "swift",
+				"configuration": "./language-configuration/language-configuration.swift.json"
+			},
+			{
+				"id": "rust",
+				"configuration": "./language-configuration/language-configuration.rust.json"
+			},
+			{
+				"id": "go",
+				"configuration": "./language-configuration/language-configuration.go.json"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "auto-comment-blocks.singleLineBlock",
+				"key": "shift+enter",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"__metadata": {
+		"id": "cb5ffd62-3768-4f92-83a0-ccf84e22ddf4",
+		"publisherDisplayName": "kky",
+		"publisherId": "0fc9d8c0-0825-492e-b1d5-1f5ab5691246"
+	}
 }

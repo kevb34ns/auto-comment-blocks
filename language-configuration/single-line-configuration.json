@@ -15,7 +15,8 @@
     "rust",
     "scss",
     "swift",
-    "typescript"
+    "typescript",
+    "vjass"
   ],
   "#": [
     "coffeescript",
