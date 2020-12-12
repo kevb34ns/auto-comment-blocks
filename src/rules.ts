@@ -49,6 +49,10 @@ export class Rules {
       // e.g. /// ...|
       beforeText: /^\s*\/\/\//,
       action: { indentAction: IndentAction.None, appendText: '/// '}
+    },{ 
+      // e.g. //! ...|
+      beforeText: /^\s*\/\/!/,
+      action: { indentAction: IndentAction.None, appendText: '//! '}
     }
   ]
 
