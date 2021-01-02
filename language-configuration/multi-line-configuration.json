@@ -11,6 +11,8 @@
     "objective-c",
     "objective-cpp",
     "php",
+    "proto",
+    "proto3",
     "rust",
     "scss",
     "swift"
