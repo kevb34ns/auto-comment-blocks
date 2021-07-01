@@ -1,20 +1,16 @@
 'use strict';
 
-import { Disposable, ExtensionContext, IndentAction, LanguageConfiguration, OnEnterRule, TextEditor, TextEditorEdit, commands, languages, workspace, } from 'vscode';
+import { Disposable, ExtensionContext, LanguageConfiguration, TextEditor, TextEditorEdit, commands, languages, workspace } from 'vscode';
 
 import { Rules } from './rules';
-
-let fs = require('fs');
+import { config as singleLineConfig } from  './single-line-configuration';
+import { config as multiLineConfig } from  './multi-line-configuration';
 
 export class Configuration {
   
   private readonly extensionName: string = "auto-comment-blocks";
   private readonly singleLineBlockCommand: string = 
       "auto-comment-blocks.singleLineBlock";
-  private readonly singleLineConfigFile: string = __dirname +
-      "/../../language-configuration/single-line-configuration.json";
-  private readonly multiLineConfigFile: string = __dirname +
-      "/../../language-configuration/multi-line-configuration.json";
 
   private readonly singleLineBlockOnEnter: string = "singleLineBlockOnEnter";
   private readonly slashStyleBlocks: string = "slashStyleBlocks";
@@ -37,9 +33,6 @@ export class Configuration {
   }
 
   private getMultiLineLanguages(): Array<string> {
-
-    let multiLineConfig = JSON.parse(fs.readFileSync(
-        this.multiLineConfigFile, 'utf-8'));
     return multiLineConfig["languages"];
   }
 
@@ -75,9 +68,6 @@ export class Configuration {
   }
 
   private getSingleLineLanguages() {
-
-    let singleLineConfig: Object = JSON.parse(fs.readFileSync(
-      this.singleLineConfigFile, 'utf-8'));
     let commentStyles = Object.keys(singleLineConfig);
     for (let key of commentStyles) {
       for (let langId of singleLineConfig[key]) {
