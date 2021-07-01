@@ -7,12 +7,14 @@
     "go",
     "groovy",
     "java",
+    "javascript",
     "less",
     "objective-c",
     "objective-cpp",
     "php",
     "rust",
     "scss",
-    "swift"
+    "swift",
+    "typescript"
   ]
 }
