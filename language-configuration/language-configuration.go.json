@@ -14,8 +14,8 @@
 		["(", ")"],
 		{ "open": "`", "close": "`", "notIn": ["string"]},
 		{ "open": "\"", "close": "\"", "notIn": ["string"]},
-    { "open": "'", "close": "'", "notIn": ["string", "comment"]},
-    ["/**", " */"]
+		{ "open": "'", "close": "'", "notIn": ["string", "comment"]},
+		{ "open": "/**", "close": " */", "notIn": ["string"] }
 	],
 	"surroundingPairs": [
 		["{", "}"],
@@ -24,5 +24,15 @@
 		["\"", "\""],
 		["'", "'"],
 		["`", "`"]
-	]
+	],
+	"indentationRules": {
+		"increaseIndentPattern": "^.*(\\bcase\\b.*:|\\bdefault\\b:|(\\b(func|if|else|switch|select|for|struct)\\b.*)?{[^}\"'`]*|\\([^)\"'`]*)$",
+		"decreaseIndentPattern": "^\\s*(\\bcase\\b.*:|\\bdefault\\b:|}[)}]*[),]?|\\)[,]?)$"
+	},
+	"folding": {
+		"markers": {
+			"start": "^\\s*//\\s*#?region\\b",
+			"end": "^\\s*//\\s*#?endregion\\b"
+		}
+	}
 }

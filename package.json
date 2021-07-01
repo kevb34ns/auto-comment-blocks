@@ -66,7 +66,7 @@
         "languages": [
             {
                 "id": "c",
-                "configuration": "./language-configuration/language-configuration.c.json"
+                "configuration": "./language-configuration/language-configuration.cpp.json"
             },
             {
                 "id": "cpp",
@@ -83,10 +83,6 @@
             {
                 "id": "groovy",
                 "configuration": "./language-configuration/language-configuration.groovy.json"
-            },
-            {
-                "id": "php",
-                "configuration": "./language-configuration/language-configuration.php.json"
             },
             {
                 "id": "objective-c",
