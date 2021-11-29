@@ -111,6 +111,10 @@
             {
                 "id": "go",
                 "configuration": "./language-configuration/language-configuration.go.json"
+            },
+            {
+                "id": "verilog",
+                "configuration": "./language-configuration/language-configuration.verilog.json"
             }
         ],
         "keybindings": [

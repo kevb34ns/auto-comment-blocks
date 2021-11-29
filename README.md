@@ -12,7 +12,7 @@ You can now use single line comment blocks for languages with `//`, `#`, or `;` 
 The Language Support section shows which languages are supported. See the Settings section for how to add single line comment support to languages that are not officially supported.
 
 ### Multi-line Comment Blocks
-This feature has not changed, but support has now been added for Less, Objective-C/C++, and Swift.
+This feature has not changed, but support has now been added for Less, Objective-C/C++, Verilog, and Swift.
 
 ## Usage
 ![Demo](https://raw.githubusercontent.com/kevinkyang/auto-comment-blocks/master/img/demo.gif)
@@ -30,9 +30,9 @@ You can insert single line comment blocks for languages with `//`, `#`, or `;` s
 
 | Comment Style | Language Support |
 | ------- | ------- |
-| `/** */` | C, C++, C#, CSS, Go, Groovy, Java, Less, Objective C/C++, PHP, Sass, Rust, Swift |
-| `/*! */` | C, C++ |
-| `//`, `///` | C, C++, C#, F#, Go, Groovy, Java, JavaScript, Less, Objective C/C++, PHP, Rust, Sass, Swift, TypeScript |
+| `/** */` | C, C++, Verilog, C#, CSS, Go, Groovy, Java, Less, Objective C/C++, PHP, Sass, Rust, Swift |
+| `/*! */` | C, C++, Verilog |
+| `//`, `///` | C, C++, Verilog, C#, F#, Go, Groovy, Java, JavaScript, Less, Objective C/C++, PHP, Rust, Sass, Swift, TypeScript |
 | `#` | CoffeeScript, Dockerfile, Makefile, Perl, PowerShell, Python, R, Ruby, YAML |
 | `;` | Clojure |
 

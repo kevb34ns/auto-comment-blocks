@@ -13,6 +13,7 @@
     "php",
     "rust",
     "scss",
-    "swift"
+    "swift",
+    "verilog"
   ]
 }
