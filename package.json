@@ -89,6 +89,10 @@
                 "configuration": "./language-configuration/language-configuration.php.json"
             },
             {
+                "id": "qml",
+                "configuration": "./language-configuration/language-configuration.qml.json"
+            },
+            {
                 "id": "objective-c",
                 "configuration": "./language-configuration/language-configuration.objective-c.json"
             },
