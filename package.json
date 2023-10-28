@@ -89,6 +89,10 @@
                 "configuration": "./language-configuration/language-configuration.php.json"
             },
             {
+                "id": "qml",
+                "configuration": "./language-configuration/language-configuration.qml.json"
+            },
+            {
                 "id": "objective-c",
                 "configuration": "./language-configuration/language-configuration.objective-c.json"
             },
@@ -128,10 +132,11 @@
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
+        "@types/mocha": "^2.2.32",
         "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+        "@types/vscode": "^1.83.1",
+        "mocha": "^2.3.3",
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0"
     }
 }
