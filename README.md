@@ -30,9 +30,9 @@ You can insert single line comment blocks for languages with `//`, `#`, or `;` s
 
 | Comment Style | Language Support |
 | ------- | ------- |
-| `/** */` | C, C++, C#, CSS, Go, Groovy, Java, Less, Objective C/C++, PHP, Sass, Rust, Swift |
+| `/** */` | C, C++, C#, CSS, Go, Groovy, Java, Kotlin, Less, Objective C/C++, PHP, Sass, Rust, Swift |
 | `/*! */` | C, C++ |
-| `//`, `///` | C, C++, C#, F#, Go, Groovy, Java, JavaScript, Less, Objective C/C++, PHP, Rust, Sass, Swift, TypeScript |
+| `//`, `///` | C, C++, C#, F#, Go, Groovy, Java, JavaScript, Kotlin, Less, Objective C/C++, PHP, Rust, Sass, Swift, TypeScript |
 | `#` | CoffeeScript, Dockerfile, Makefile, Perl, PowerShell, Python, R, Ruby, YAML |
 | `;` | Clojure |
 
